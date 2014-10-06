@@ -1,0 +1,103 @@
+state,abbreviation,city,mostpopulouscity,population,size,size_units,timezone1,timezone2,dst
+ALABAMA,AL,Montgomery,Birmingham,"4,708,708","52,423",sq miles,CST (UTC-6),EST (UTC-5),YES
+ALASKA,AK,Juneau,Anchorage,"698,473","656,425",sq miles,AKST (UTC-09) ,HST (UTC-10) ,YES
+ARIZONA,AZ,Phoenix,Phoenix,"6,595,778","114,006",sq miles,MT (UTC-07),,NO
+ARKANSAS,AR,Little Rock,Little Rock,"2,889,450","53,182",sq miles,CST (UTC-6),,YES
+CALIFORNIA,CA,Sacramento,Los Angeles,"36,961,664","163,707",sq miles,PT (UTC-8),,YES
+COLORADO,CO,Denver,Denver,"5,024,748","104,100",sq miles,MT (UTC-07),,YES
+CONNECTICUT,CT,Hartford,Bridgeport,"3,518,288","5,544",sq miles,EST (UTC-5),,YES
+DELAWARE,DE,Dover,Wilmington,"885,122","1,954",sq miles,EST (UTC-5),,YES
+FLORIDA,FL,Tallahassee,Jacksonville,"18,537,969","65,758",sq miles,EST (UTC-5),CST (UTC-6),YES
+GEORGIA,GA,Atlanta,Atlanta,"9,829,211","59,441",sq miles,EST (UTC-5),,YES
+HAWAII,HI,Honolulu,Honolulu,"1,295,178","10,932",sq miles,HST (UTC-10) ,,NO
+IDAHO,ID,Boise,Boise,"1,545,801","83,574",sq miles,MT (UTC-07),PT (UTC-8),YES
+ILLINOIS,IL,Springfield,Chicago,"12,910,409","57,918",sq miles,CST (UTC-6),,YES
+INDIANA,IN,Indianapolis,Indianapolis,"6,423,113","36,420",sq miles,EST (UTC-5),CST (UTC-6),YES
+IOWA,IA,Des Moines,Des Moines,"3,007,856","56,276",sq miles,CST (UTC-6),,YES
+KANSAS,KS,Topeka,Wichita,"2,818,747","82,282",sq miles,CST (UTC-6),MT (UTC-07),YES
+KENTUCKY,KY,Frankfort,Louisville,"4,314,113","40,411",sq miles,EST (UTC-5),CST (UTC-6),YES
+LOUISIANA,LA,Baton Rouge,New Orleans,"4,492,076","51,843",sq miles,CST (UTC-6),,YES
+MAINE,ME,Augusta,Portland,"1,318,301","35,387",sq miles,EST (UTC-5),,YES
+MARYLAND,MD,Annapolis,Baltimore,"5,699,478","12,407",sq miles,EST (UTC-5),,YES
+MASSACHUSETTS,MA,Boston,Boston,"6,593,587","10,555",sq miles,EST (UTC-5),,YES
+MICHIGAN,MI,Lansing,Detroit,"9,969,727","96,810",sq miles,EST (UTC-5),CST (UTC-6),YES
+MINNESOTA,MN,Saint Paul,Minneapolis,"5,266,214","86,943",sq miles,CST (UTC-6),,YES
+MISSISSIPPI,MS,Jackson,Jackson,"2,951,996","48,434",sq miles,CST (UTC-6),,YES
+MISSOURI,MO,Jefferson City,Kansas City,"5,987,580","69,709",sq miles,CST (UTC-6),,YES
+MONTANA,MT,Helena,Billings,"974,989","147,046",sq miles,MT (UTC-07),,YES
+NEBRASKA,NE,Lincoln,Omaha,"1,796,619","77,358",sq miles,CST (UTC-6),MT (UTC-07),YES
+NEVADA,NV,Carson City,Las Vegas,"2,643,085","110,567",sq miles,PT (UTC-8),MT (UTC-07),YES
+NEW HAMPSHIRE,NH,Concord,Machester,"1,324,575","9,351",sq miles,EST (UTC-5),,YES
+NEW JERSEY,NJ,Trenton,Newark,"8,707,739","8,722",sq miles,EST (UTC-5),,YES
+NEW MEXICO,NM,Santa Fe,Albuquerque,"2,009,671","121,593",sq miles,MT (UTC-07),,YES
+NEW YORK,NY,Albany,New York,"19,541,453","54,475",sq miles,EST (UTC-5),,YES
+NORTH CAROLINA,NC,Raleigh,Charlotte,"9,380,884","53,821",sq miles,EST (UTC-5),,YES
+NORTH DAKOTA,ND,Bismarck,Fargo,"646,844","70,704",sq miles,CST (UTC-6),MT (UTC-07),YES
+OHIO,OH,Columbus,Columbus,"11,542,645","44,828",sq miles,EST (UTC-5),,YES
+OKLAHOMA,OK,Oklahoma City,Oklahoma City,"3,687,050","69,903",sq miles,CST (UTC-6),,YES
+OREGON,OR,Salem,Portland,"3,825,657","98,386",sq miles,PT (UTC-8),MT (UTC-07),YES
+PENNSYLVANIA,PA,Harrisburg,Philadelphia,"12,604,767","46,058",sq miles,EST (UTC-5),,YES
+RHODE ISLAND,RI,Providence,Providence,"1,053,209","1,545",sq miles,EST (UTC-5),,YES
+SOUTH CAROLINA,SC,Columbia,Columbia,"4,561,242","32,007",sq miles,EST (UTC-5),,YES
+SOUTH DAKOTA,SD,Pierre,Sioux Falls,"812,383","77,121",sq miles,CST (UTC-6),MT (UTC-07),YES
+TENNESSEE,TN,Nashville,Memphis,"6,296,254","42,146",sq miles,CST (UTC-6),EST (UTC-5),YES
+TEXAS,TX,Austin,Houston,"24,782,302","268,601",sq miles,CST (UTC-6),MT (UTC-07),YES
+UTAH,UT,Salt Lake City,Salt Lake City,"2,784,572","84,904",sq miles,MT (UTC-07),,YES
+VERMONT,VT,Montpelier,Burlington,"621,760","9,615",sq miles,EST (UTC-5),,YES
+VIRGINIA,VA,Richmond,Virginia Beach,"7,882,590","42,769",sq miles,EST (UTC-5),,YES
+WASHINGTON,WA,Olympia,Seattle,"6,664,195","71,303",sq miles,PT (UTC-8),,YES
+WEST VIRGINIA,WV,Charleston,Charleston,"1,819,777","24,231",sq miles,EST (UTC-5),,YES
+WISCONSIN,WI,Madison,Milwaukee,"5,654,774","65,503",sq miles,CST (UTC-6),,YES
+WYOMING,WY,Cheyenne,Cheyenne,"544,270","97,818",sq miles,MT (UTC-07),,YES
+
+gen sAKn = inlist(stateab,”WA”)
+gen sALn = inlist(stateab,”TN”,”GA”,”FL”,”MS”)
+gen sARn = inlist(stateab,”MO”,”TN”,”MS”,”LA”,”TX”,”OK”)
+gen sAZn = inlist(stateab,”UT”,”CO”,”NM”,”CA”,”NV”)
+gen sCAn = inlist(stateab,”OR”,”NV”,”AZ”,”HI”)
+gen sCOn = inlist(stateab,”WY”,”NE”,”KS”,”OK”,”NM”,”AZ”,”UT”)
+gen sCTn = inlist(stateab,”MA”,”RI”,”NY”)
+gen sDCn = inlist(stateab,”MD”,”VA”)
+gen sDEn = inlist(stateab,”PA”,”NJ”,”MD”)
+gen sFLn = inlist(stateab,”GA”,”AL”)
+gen sGAn = inlist(stateab,”NC”,”SC”,”FL”,”AL”,”TN”)
+gen sHIn = inlist(stateab,”CA”)
+gen sIAn = inlist(stateab,”MN”,”WI”,”IL”,”MO”,”NE”,”SD”)
+gen sIDn = inlist(stateab,”MT”,”WY”,”UT”,”NV”,”OR”,”WA”)
+gen sILn = inlist(stateab,”WI”,”IN”,”KY”,”MO”,”IA”)
+gen sINn = inlist(stateab,”MI”,”OH”,”KY”,”IL”)
+gen sKSn = inlist(stateab,”NE”,”MO”,”OK”,”CO”)
+gen sKYn = inlist(stateab,”OH”,”WV”,”VA”,”TN”,”MO”,”IL”,”IN”)
+gen sLAn = inlist(stateab,”AR”,”MS”,”TX”)
+gen sMAn = inlist(stateab,”NH”,”RI”,”CT”,”NY”,”VT”)
+gen sMDn = inlist(stateab,”PA”,”DE”,”DC”,”VA”,”WV”)
+gen sMEn = inlist(stateab,”NH”)
+gen sMIn = inlist(stateab,”OH”,”IN”,”WI”)
+gen sMNn = inlist(stateab,”WI”,”IA”,”SD”,”ND”)
+gen sMOn = inlist(stateab,”IA”,”IL”,”KY”,”TN”,”AR”,”OK”,”KS”,”NE”)
+gen sMSn = inlist(stateab,”TN”,”AL”,”LA”,”AR”)
+gen sMTn = inlist(stateab,”ND”,”SD”,”WY”,”ID”)
+gen sNCn = inlist(stateab,”VA”,”SC”,”GA”,”TN”)
+gen sNDn = inlist(stateab,”MN”,”SD”,”MT”)
+gen sNEn = inlist(stateab,”SD”,”IA”,”MO”,”KS”,”CO”,”WY”)
+gen sNHn = inlist(stateab,”ME”,”MA”,”VT”)
+gen sNJn = inlist(stateab,”NY”,”DE”,”PA”)
+gen sNMn = inlist(stateab,”CO”,”OK”,”TX”,”AZ”,”UT”)
+gen sNVn = inlist(stateab,”ID”,”UT”,”AZ”,”CA”,”OR”)
+gen sNYn = inlist(stateab,”VT”,”MA”,”CT”,”NJ”,”PA”)
+gen sOHn = inlist(stateab,”PA”,”WV”,”KY”,”IN”,”MI”)
+gen sOKn = inlist(stateab,”KS”,”MO”,”AR”,”TX”,”NM”,”CO”)
+gen sORn = inlist(stateab,”WA”,”ID”,”NV”,”CA”)
+gen sPAn = inlist(stateab,”NY”,”NJ”,”DE”,”MD”,”WV”,”OH”)
+gen sRIn = inlist(stateab,”MA”,”CT”)
+gen sSCn = inlist(stateab,”NC”,”GA”)
+gen sSDn = inlist(stateab,”ND”,”MN”,”IA”,”NE”,”WY”,”MT”)
+gen sTNn = inlist(stateab,”KY”,”VA”,”NC”,”GA”,”AL”,”MS”,”AR”,”MO”)
+gen sTXn = inlist(stateab,”OK”,”AR”,”LA”,”NM”)
+gen sUTn = inlist(stateab,”ID”,”WY”,”CO”,”NM”,”AZ”,”NV”)
+gen sVAn = inlist(stateab,”MD”,”DC”,”NC”,”TN”,”KY”,”WV”)
+gen sVTn = inlist(stateab,”NH”,”MA”,”NY”)
+gen sWAn = inlist(stateab,”AK”,”ID”,”OR”)
+gen sWIn = inlist(stateab,”MI”,”IL”,”IA”,”MN”)
+gen sWVn = inlist(stateab,”PA”,”MD”,”VA”,”KY”,”OH”)
+gen sWYn = inlist(stateab,”MT”,”SD”,”NE”,”CO”,”UT”,”ID”)
