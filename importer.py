@@ -1,6 +1,30 @@
 #!/usr/bin/python
-# ./importer.py country_capitals.csv city:capital_of "name,currency,region,subregion,demonym,borders,latlng,area,nativeLanguage,languages" 
-#  ./importer.py country_capitals.csv city:capital_of,borders:_borders:r:0,region:in_region:r,subregion:in_subregion:r "name,acronym,currency,demonym,latlng,area,nativeLanguage,languages" > import_countries.cypher
+#
+# Example use:
+#
+# ./importer.py state_capitals.csv city:capital_of "state,abbreviation,size,size_units,dst" 
+# 
+# Syntax:
+#
+# ./importer.py <File> <relationship_columns> "<property_columns>"
+#
+# relationship_columns and property columns are comma separated lists.
+# 
+# the relationship_columns will create a new node for each column in the relationship, 
+# and relate it to the node created by the line.
+#
+# The relationship_column entry is a colon seperated list of entries:
+# {column_name}:{relationship_name}:{direction_of_relationship}:{whether_to_create a node}
+# 
+#   column_name: name of csv column
+#   relationship_name: name of relationship to create
+#   direction_of_relationship 'f' or 'r' forward: this -> parent 'r' parent -> this
+#   whether_to_create_a_node: if this column relates this node to other nodes in the list, put 0 here
+# 
+# This is somewhat custom to my purposes but I will continue to generesize it.
+#
+# all this script does is print the cypher to the screen, so there there should be no danger in using it.
+
 
 import csv
 from StringIO import StringIO
@@ -32,7 +56,7 @@ property_fields = sys.argv[3].split(',')
 
 f = open(sys.argv[1], "r")
 
-line = f.readline()
+liane = f.readline()
 
 titles = line.split(DELIMITER)
 
